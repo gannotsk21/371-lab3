@@ -23,6 +23,12 @@ public class BrightnessFilter extends PhotoFilter {
     * @param inPixel is a 32 bit pixel that contains RGB color values
     * @return a new Pixel in which each of the RGB components has been increased
     */
+    public void setAdjustment(int progress) {
+        adjustment = progress;
+    }
+    public int getAdjustment(){
+        return adjustment;
+    }
     public int transformPixel(int inPixel) {
         int red = constrain(Color.red(inPixel) + adjustment);
         int green = constrain(Color.green(inPixel) + adjustment);
@@ -30,10 +36,5 @@ public class BrightnessFilter extends PhotoFilter {
         int outPixel = Color.argb(Color.alpha(inPixel), red, green, blue);
         return outPixel;
     }
-    public void setAdjustment(int progress) {
-        adjustment = progress;
-    }
-    public int getAdjustment(){
-        return adjustment;
-    }
+
 }

@@ -65,8 +65,7 @@
             android:id="@+id/brightnessText"
             android:layout_width="0dp"
             android:layout_height="52dp"
-            android:layout_weight="3"
-            android:text="TextView" />
+            android:layout_weight="3" />
 
     </LinearLayout>
 </LinearLayout>
